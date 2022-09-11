@@ -24,3 +24,40 @@ to the list using the append() method.
 
 Sort the list again and display each name in another for loop."""
 
+#***Guest list app***
+
+#-list with 10 names-
+guests = ['Yasmeen', 'Anissa', 'Zoe', 'Andrew', 'Gustavo', 'Tyler', 'Kevin', 'Tiana', 'Nyree', 'Eliasib']
+
+
+#-sort list-
+guests.sort()
+
+
+#-for loop-
+print(f"Proposed Guest List:\n\n")
+for guest in guests:
+    print(guest)
+
+    
+#-Delete guest-
+print(f"\n\nOops! It turns out one of your guests can't make it.")
+missing_guest = input(f"\nPlease enter the index of the guest to be deleted from list: ")
+guest_pop = guests.pop(int(missing_guest))
+print(f"{guest_pop} has been removed from the guest list.")
+
+
+#-append guest-
+new_guest = input("please invite another guest as a replacement: ")
+guests.append(new_guest.title())
+
+#-final sort for loop-
+print("\nNew Guest List:")
+guests.sort()
+for guest in guests:
+    print(guest)
+
+#exit function
+input('\n\npress any key to close window')
+exit()
+
